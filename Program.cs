@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Parcial1_AP1_EliezerTerrero.Components;
 using Parcial1_AP1_EliezerTerrero.DAL;
+using Parcial1_AP1_EliezerTerrero.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,7 @@ builder.Services.AddRazorComponents()
 
 var Constr = builder.Configuration.GetConnectionString("ConStr");
 builder.Services.AddDbContext<Contexto>(options => options.UseSqlite(Constr));
+builder.Services.AddScoped<MetasService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
