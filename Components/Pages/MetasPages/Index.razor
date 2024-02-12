@@ -1,0 +1,46 @@
+﻿@page "/Index"
+
+@inject MetasService metasService
+@rendermode InteractiveServer
+
+
+<div class="card">
+    <div class="accordion-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">MetaId</th>
+                    <th scope="col">Descripci&oacute;n</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Monto</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var meta in metas)
+                {
+                    <tr>
+                        <td scope="row" >@meta.MetaId</td>
+                        <td scope="row" >@meta.Descripcion</td>
+                        <td scope="row" >@meta.Fecha</td>
+                        <td scope="row" >@meta.Monto</td>
+                        <td>
+                            <a href="/Eliminar/@meta.MetaId">Eliminar</a>
+                            <a href="/Editar/@meta.MetaId">Editar</a>
+                            <a href="/Detalles/@meta.MetaId">Detalles</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+@code {
+    List<Metas> metas = new List<Metas>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        metas = await metasService.GetMetas(d => true);
+    }
+}
