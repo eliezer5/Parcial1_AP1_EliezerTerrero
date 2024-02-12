@@ -15,7 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DAL\" />
     <Folder Include="Data\" />
     <Folder Include="Service\" />
   </ItemGroup>
