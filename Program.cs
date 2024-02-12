@@ -9,7 +9,7 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
 var Constr = builder.Configuration.GetConnectionString("ConStr");
-builder.Services.AddDbContext<Contexto>(options => options.UseSqlite(Constr))
+builder.Services.AddDbContext<Contexto>(options => options.UseSqlite(Constr));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
