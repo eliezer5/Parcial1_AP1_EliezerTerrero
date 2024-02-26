@@ -42,6 +42,10 @@
     public Metas meta = new Metas();
     public string mensaje = string.Empty;
 
+    protected override void OnInitialized()
+    {
+        meta.Fecha = DateTime.Now;
+    }
     public async Task save()
     {
         var guardar = await metaService.save(meta);
