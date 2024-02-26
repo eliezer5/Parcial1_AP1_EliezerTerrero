@@ -13,19 +13,19 @@
 
             <div class="col-auto">
                 <label>Descripci&oacute;n</label>
-                <InputText @bind-Value="@meta.Descripcion" class="form-control"></InputText>
+                <InputText @bind-Value="@meta.Descripcion" class="form-control" readonly></InputText>
                 <ValidationMessage For="(() => meta.Descripcion)" />
             </div>
 
             <div class="col-auto">
                 <label>Fecha</label>
-                <InputDate @bind-Value="@meta.Fecha" class="form-control" min="2020-01-01"></InputDate>
+                <InputDate @bind-Value="@meta.Fecha" class="form-control" min="2020-01-01" readonly></InputDate>
                 <ValidationMessage For="(() => meta.Fecha)" />
             </div>
 
             <div class="col-auto">
                 <label>Monto</label>
-                <InputNumber @bind-Value="@meta.Monto" class="form-control"></InputNumber>
+                <InputNumber @bind-Value="@meta.Monto" class="form-control" readonly></InputNumber>
                 <ValidationMessage For="(() => meta.Monto)" />
             </div>
         </div>
