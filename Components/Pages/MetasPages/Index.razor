@@ -27,7 +27,7 @@
                         <td scope="row" >@meta.MetaId</td>
                         <td scope="row" >@meta.Descripcion</td>
                         <td scope="row" >@meta.Fecha</td>
-                        <td scope="row" >@meta.Monto</td>
+                        <td scope="row" >@meta.Monto.ToString("N2")</td>
                         <td>
                             <a href="/Eliminar/@meta.MetaId" class="btn btn-outline-danger">Eliminar</a>
                             <a href="/Editar/@meta.MetaId" class="btn btn-outline-info">Editar</a>
