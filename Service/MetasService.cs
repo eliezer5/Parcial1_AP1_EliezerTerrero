@@ -28,7 +28,7 @@ namespace Parcial1_AP1_EliezerTerrero.Service
             }
             else
             {
-                _contexto.Metas.Remove(meta);
+                _contexto.Metas.Update(meta);
             }
 
             return await _contexto.SaveChangesAsync() > 0;
