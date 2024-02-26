@@ -29,9 +29,9 @@
                         <td scope="row" >@meta.Fecha</td>
                         <td scope="row" >@meta.Monto.ToString("N2")</td>
                         <td>
-                            <a href="/Eliminar/@meta.MetaId" class="btn btn-outline-danger">Eliminar</a>
-                            <a href="/Editar/@meta.MetaId" class="btn btn-outline-info">Editar</a>
-                            <a href="/Detalles/@meta.MetaId" class=" btn btn-outline-dark">Detalles</a>
+                            <a href="/Eliminar/@meta.MetaId" class="bi bi-trash btn btn-outline-danger">Eliminar</a>
+                            <a href="/Editar/@meta.MetaId" class="bi bi-pencil btn btn-outline-info">Editar</a>
+                            <a href="/Detalles/@meta.MetaId" class="bi bi-card-text btn btn-outline-dark">Detalles</a>
                         </td>
                     </tr>
                 }
@@ -39,7 +39,7 @@
         </table>
     </div>
     <div class="card-footer">
-        <a href="/" class="btn btn-outline-info">Atras</a>
+        <a href="/" class="bi bi-arrow-90deg-left btn btn-outline-info">Atras</a>
     </div>
 </div>
 @code {
