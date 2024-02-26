@@ -16,6 +16,12 @@ namespace Parcial1_AP1_EliezerTerrero.Service
 
         public async Task<bool> save(Metas meta)
         {
+            if (_contexto.Metas.Any(p => p.Descripcion.ToLower() == p.Descripcion.ToLower()))
+            {
+                return false;
+            }
+
+        
             if (meta.MetaId == 0) 
             {
                 _contexto.Metas.Add(meta);
